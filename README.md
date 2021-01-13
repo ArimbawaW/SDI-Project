@@ -155,7 +155,10 @@ Firewall Naxsi sekarang telah diinstal dan dikonfigurasi, saatnya untuk mengujin
 Untuk menguji Naxsi melawan serangan XSS, buka browser web Anda dari sistem jarak jauh dan ketik URL public ip address/q?= "> <script> alert (1) </script>. Sesuai dengan aturan Naxsi yang mana Anda telah mengkonfigurasi sebelumnya, Anda akan diarahkan ke halaman error.html dengan pesan berikut:
 ![Alt text](https://webdock.io/application/files/6615/6621/3971/naxsi1.png)
 
-
+Anda juga dapat memverifikasi ini dengan memeriksa log Nginx seperti yang ditunjukkan di bawah ini:
+```
+tail -f /var/log/nginx/error.log
+```
 
 
 
